@@ -1,0 +1,24 @@
+# Default values for baselime-logs-exporter.
+# This is a YAML-formatted file.
+nameOverride: ""
+fullnameOverride: ""
+
+# The service account is used to add metadata to the logs, such as namespaces, pod names etc.
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Automatically mount a ServiceAccount's API credentials?
+  automount: true
+  # Annotations to add to the service account
+  annotations: {}
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 10
+  targetCPUUtilizationPercentage: 80
+  targetMemoryUtilizationPercentage: 80
+
+apiKey: "YOUR_API_KEY"

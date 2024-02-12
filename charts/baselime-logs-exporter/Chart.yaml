@@ -1,0 +1,17 @@
+apiVersion: v2
+name: baselime-logs-exporter
+description: Export your Kubernetes logs to Baselime.io
+version: 0.1.0
+appVersion: "1.16.0"
+keywords:
+  - monitoring
+  - observability
+  - alerting
+  - metric
+home: https://baselime.io
+icon: https://baselime.io/_nuxt/img/Baselime_Logo_RGB_Primary_DarkBg_Flat.101e4cd.svg
+sources:
+  - https://github.com/baselime/helm-charts
+maintainers:
+  - name: Baselime
+    email: support@baselime-logs-exporter.io

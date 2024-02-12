@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: baselime-collector
+  labels:
+    {{- include "baselime.labels" . | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      app: baselime-collector
+  template:
+    metadata:
+      labels:
+        app: baselime-collector
+      annotations:
+        checksum/config: {{ include (print $.Template.BasePath "/fluentbit-configmap.yaml") . | sha256sum }}
+    spec:
+      serviceAccountName: {{ .Values.serviceAccount.name }}
+      containers:
+        - name: fluent-bit
+          image: cr.fluentbit.io/fluent/fluent-bit
+          args:
+            - -c
+            - /etc/fluent-bit/fluent-bit.conf
+          volumeMounts:
+            - mountPath: /etc/fluent-bit
+              name: config-volume
+            - name: varlog
+              mountPath: /var/log
+      volumes:
+        - name: varlog
+          hostPath:
+            path: /var/log
+        - name: config-volume
+          configMap:
+            name: fluentbit-config
+            items:
+              - key: fluent-bit.conf
+                path: fluent-bit.conf
