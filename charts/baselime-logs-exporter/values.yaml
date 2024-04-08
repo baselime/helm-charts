@@ -11,7 +11,7 @@ serviceAccount:
   # Annotations to add to the service account
   annotations: {}
   # If not set and create is true, a name is generated using the fullname template
-  name: ""
+  name: "baselime-metadata-collector"
 
 autoscaling:
   enabled: true
