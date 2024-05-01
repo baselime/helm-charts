@@ -1,7 +1,7 @@
 apiVersion: v2
 name: baselime-logs-exporter
 description: Export your Kubernetes logs to Baselime.io
-version: 0.1.2
+version: 0.1.3
 appVersion: "1.16.0"
 keywords:
   - monitoring
@@ -14,4 +14,4 @@ sources:
   - https://github.com/baselime/helm-charts
 maintainers:
   - name: Baselime
-    email: support@baselime-logs-exporter.io
+    email: support@baselime.io
