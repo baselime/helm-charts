@@ -30,7 +30,7 @@ data:
 
     [OUTPUT]
       Name         http
-      Host         events.baselime.cc
+      Host         events.baselime.io
       Port         443
       URI          /v1/logs
       Format       json

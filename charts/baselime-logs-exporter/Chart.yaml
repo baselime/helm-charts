@@ -9,7 +9,7 @@ keywords:
   - alerting
   - metric
 home: https://baselime.io
-icon: https://baselime.io/_nuxt/img/Baselime_Logo_RGB_Primary_DarkBg_Flat.101e4cd.svg
+icon: https://baselime.io/logo.svg
 sources:
   - https://github.com/baselime/helm-charts
 maintainers:
