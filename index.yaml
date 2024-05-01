@@ -3,6 +3,27 @@ entries:
   baselime-logs-exporter:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2024-05-01T16:07:51.02831853Z"
+    description: Export your Kubernetes logs to Baselime.io
+    digest: 5e1315c5084c40dc9b80886ac46120f94f6bc02ac90e8fec85a39f4515a21048
+    home: https://baselime.io
+    icon: https://baselime.io/logo.svg
+    keywords:
+    - monitoring
+    - observability
+    - alerting
+    - metric
+    maintainers:
+    - email: support@baselime.io
+      name: Baselime
+    name: baselime-logs-exporter
+    sources:
+    - https://github.com/baselime/helm-charts
+    urls:
+    - https://github.com/baselime/helm-charts/releases/download/baselime-logs-exporter-0.1.3/baselime-logs-exporter-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2024-05-01T15:45:21.9426704Z"
     description: Export your Kubernetes logs to Baselime.io
     digest: 4a2f7c59c7e208ce8b639c6df15f7b98ed2514e59374feeae100ddba4ccd01ad
@@ -64,4 +85,4 @@ entries:
     urls:
     - https://github.com/baselime/helm-charts/releases/download/baselime-logs-exporter-0.1.0/baselime-logs-exporter-0.1.0.tgz
     version: 0.1.0
-generated: "2024-05-01T15:45:21.942686129Z"
+generated: "2024-05-01T16:07:51.02833963Z"
